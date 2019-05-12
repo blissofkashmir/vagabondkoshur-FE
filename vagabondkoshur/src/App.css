@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Muli');
 
 *{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Muli', sans-serif;
 }
 
 .app-container{
 
     display: flex;
     flex-direction: column;
-    background-color: #C9F5C0;
+    background-color: #82D670;
     height: 100%;
 
     position:fixed;
@@ -20,23 +20,29 @@
 
 .koshurvagabond-form-input{
 
-    border-radius: 5px;
+    border-radius: 6px;
     margin-top: 10px;
     padding: 6px;
     min-height: 30px;
     font-size: 18px;
+    
 }
 
 .koshurvagabond-form-submit{
 
-    min-height: 40px;
+   
     background-color: #1D640F;
-    color: #C9F5C0;
-    font-weight: bold;
-    font-size: 15px;
+    border-color: #1D640F;
+    color: antiquewhite;
 }
 
 .koshurvagabond-title-text{
 
     color: #1D640F;
+}
+
+.koshurvagabond-link{
+
+    margin-top:20px;
+    font-size: 18px;
 }

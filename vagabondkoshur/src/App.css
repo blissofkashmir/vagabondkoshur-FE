@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.app-container{
+
+    display: flex;
+    flex-direction: column;
+    background-color: #C9F5C0;
+    height: 100%;
+
+    position:fixed;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+}
+
+.koshurvagabond-form-input{
+
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 6px;
+    min-height: 30px;
+    font-size: 18px;
+}
+
+.koshurvagabond-form-submit{
+
+    min-height: 40px;
+    background-color: #1D640F;
+    color: #C9F5C0;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.koshurvagabond-title-text{
+
+    color: #1D640F;
+}

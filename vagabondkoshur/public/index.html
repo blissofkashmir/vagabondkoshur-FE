@@ -23,7 +23,7 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -34,5 +34,47 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+	<div class="app">
+		<div id="deviceready" class="blink">
+			
+			<div id="loading" class='koshurvagabond-views-loading-container'></div>
+			<div id="root" style="display:none"></div>
+		</div>
+		
+    </div>
+	
+	<script type="text/javascript" src="cordova.js"></script>
+	<script>
+			var app = {
+		// Application Constructor
+		initialize: function() {
+			document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+		},
+
+		// deviceready Event Handler
+		//
+		// Bind any cordova events here. Common events are:
+		// 'pause', 'resume', etc.
+		onDeviceReady: function() {
+			this.receivedEvent('deviceready');
+		},
+
+		// Update DOM on a Received Event
+		receivedEvent: function(id) {
+			var parentElement = document.getElementById(id);
+			var loadingElement = parentElement.querySelector('#loading');
+			var appElement = parentElement.querySelector('#root');
+
+			setTimeout(function(){
+				loadingElement.setAttribute('style', 'display:none;');
+				appElement.setAttribute('style', 'display:block;');
+			},1000);
+
+			console.log('Received Event: ' + id);
+		}
+		};
+
+		app.initialize();
+	</script>
   </body>
 </html>

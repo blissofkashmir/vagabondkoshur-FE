@@ -46,3 +46,19 @@
     margin-top:20px;
     font-size: 18px;
 }
+
+.koshurvagabond-views-loading-container{
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    position:fixed;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    background-image:url('assets/images/loading.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}

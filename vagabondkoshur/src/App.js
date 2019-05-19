@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import Login from './views/login/login';
 import './App.css';
 
-
-
-
 class App extends Component {
 
   constructor(props){
@@ -16,7 +13,7 @@ class App extends Component {
       userName:'amjad',
       password:'aaa',
       attemptedUserName:'',
-      attemptedPassword:'',
+      attemptedPassword:''
 
     };
 

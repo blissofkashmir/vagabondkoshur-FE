@@ -38,6 +38,7 @@
 		<div id="deviceready" class="blink">
 			
 			<div id="loading" class='koshurvagabond-views-loading-container'></div>
+			
 			<div id="root" style="display:none"></div>
 		</div>
 		
@@ -45,6 +46,18 @@
 	
 	<script type="text/javascript" src="cordova.js"></script>
 	<script>
+
+		function kickOff(id){
+
+			var parentElement = document.getElementById(id);
+			var loadingElement = parentElement.querySelector('#loading');
+			var appElement = parentElement.querySelector('#root');
+
+			setTimeout(function(){
+				loadingElement.setAttribute('style', 'display:none;');
+				appElement.setAttribute('style', 'display:block;');
+			},1800);
+		}
 			var app = {
 		// Application Constructor
 		initialize: function() {
@@ -56,25 +69,19 @@
 		// Bind any cordova events here. Common events are:
 		// 'pause', 'resume', etc.
 		onDeviceReady: function() {
+			
 			this.receivedEvent('deviceready');
 		},
 
 		// Update DOM on a Received Event
 		receivedEvent: function(id) {
-			var parentElement = document.getElementById(id);
-			var loadingElement = parentElement.querySelector('#loading');
-			var appElement = parentElement.querySelector('#root');
-
-			setTimeout(function(){
-				loadingElement.setAttribute('style', 'display:none;');
-				appElement.setAttribute('style', 'display:block;');
-			},1000);
-
+			
+			kickOff(id);
 			console.log('Received Event: ' + id);
 		}
 		};
 
-		app.initialize();
+		this.onDeviceReady?app.initialize():kickOff("deviceready");
 	</script>
   </body>
 </html>

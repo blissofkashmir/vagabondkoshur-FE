@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Login from './views/login/login';
 import './App.css';
+import SignUp from './views/signup/signup';
+import { HashRouter, Route } from 'react-router-dom';
+
 
 class App extends Component {
 
@@ -52,14 +55,18 @@ class App extends Component {
     )
 
   }
-
   
   render() {
     //Main Application File
     return (
-      <div className="app-container">
-        <Login validateUser={this.validateUser} onInputUserName={this.onInputUserName} onInputPassword={this.onInputPassword}></Login>
-      </div>
+      <HashRouter>
+        <div className="app-container">
+          <Route exact path="/" component={Login}></Route>
+          <Route render={(props) => <SignUp validateUser={this.validateUser} onInputUserName={this.onInputUserName} onInputPassword={this.onInputPassword} />}
+          path="/signup"></Route>
+        </div>
+      </HashRouter>
+      
     );
   }
 }

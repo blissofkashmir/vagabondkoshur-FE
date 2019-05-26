@@ -8,7 +8,9 @@
 
     display: flex;
     flex-direction: column;
-    background-color: #82D670;
+    background-color: #effbf0;
+    align-items: center;
+    justify-content: center;
     height: 100%;
 
     position:fixed;
@@ -20,31 +22,40 @@
 
 .koshurvagabond-form-input{
 
-    border-radius: 6px;
-    margin-top: 10px;
-    padding: 6px;
-    min-height: 30px;
-    font-size: 18px;
+    border-radius: 30px;
+    height: 30px;
+    padding: 10px;
+    font-size: 1.2em;
+    border: solid 2px #0a5960;   
+    width:300px;
     
+     
 }
 
-.koshurvagabond-form-submit{
+.koshurvagabond-form-btn{
 
-   
-    background-color: #1D640F;
-    border-color: #1D640F;
-    color: antiquewhite;
+    border-radius: 30px;
+    background-color: #50ce52;
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.5em;
+    width: 330px;
+    height: 50px;
+    padding: 0;
 }
 
 .koshurvagabond-title-text{
 
-    color: #1D640F;
+    color: #50ce52;
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
 }
 
 .koshurvagabond-link{
 
-    margin-top:20px;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .koshurvagabond-views-loading-container{

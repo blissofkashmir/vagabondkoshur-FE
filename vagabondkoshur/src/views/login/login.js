@@ -1,7 +1,9 @@
 import React from 'react';
 import FbLogin from './fb-login/fb-login';
-
 import './login.css';
+import SignUp from '../signup/signup';
+import {Link, Route} from 'react-router-dom'
+
 
 
 const onInputUserName = (e, props) => {
@@ -18,24 +20,36 @@ const onInputPassword = (e, props) => {
 
 const Login = (props) =>{
 
+        
         return(
 
             <div className='koshurvagabond-views-login-form'>
-                <h1 className="koshurvagabond-title-text">Koshur Vagabond!</h1>
+                <h1 className="koshurvagabond-title-text">LOG IN</h1>
 
                 <input className='koshurvagabond-form-input koshurvagabond-views-formitem' type="text" name="username" 
-                placeholder="User Name" onChange={(e)=>{onInputUserName(e, props)}}/>
-                <input className='koshurvagabond-form-input koshurvagabond-views-formitem' type="password" name="password" 
-                placeholder="Password" onChange={(e)=>{onInputPassword(e, props)}}/>
-                <input className='koshurvagabond-form-input koshurvagabond-form-submit koshurvagabond-views-formitem koshurvagabond-views-login' 
-                type="submit" value="Login"
-                onClick={(e)=>{props.validateUser();}}/>
-                <a className='koshurvagabond-link' href='#'>Become a Koshur Vagabond!</a>
+                placeholder="Email" onChange={(e)=>{onInputUserName(e, props)}}/>
+
+                <div className='form-box'>
+                     <input className='koshurvagabond-form-input koshurvagabond-views-formitem' type="password" name="password" 
+                     placeholder="Password" onChange={(e)=>{onInputPassword(e, props)}}/>
+                     <a href='#'>Forgot your password?</a>
+                </div>
+                
+                <div className='form-box'>
+
+                    <input className='koshurvagabond-form-btn koshurvagabond-views-login-btn' 
+                    type="submit" value="Login"
+                    onClick={(e)=>{props.validateUser();}}/>
+
+                    <Link to="/signup">Sign up!</Link>
+                </div>
+                
 
 
                 <div className='koshurvagabond-views-login-socialmedia'>
                     <FbLogin></FbLogin>
                 </div>
+                
                 
                 
             </div>
